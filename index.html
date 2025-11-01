@@ -19,7 +19,7 @@
     </script>
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     
-    <title>登録日編集</title>
+    <title>登録日編集!</title>
     <script>
         //userid取得
         document.addEventListener("DOMContentLoaded", () => {
@@ -48,17 +48,6 @@
             const user_id = document.getElementById('id_').value;
             document.getElementById('log').value += data_anniversary;
             document.getElementById('log').value += (typeof data_anniversary);
-            const selectDeleteAnniversary = document.getElementById('anniversary');
-            for (var i=0; i<data_anniversary.length;i++){
-                let option = document.createElement('option');
-                var all_data = data_anniversary[i].split("\n");
-                if (all_data[1] == document.getElementById('id_').value) {
-                    //document.getElementById('log').value += all_data[0] + "\n";
-                    option.value = all_data[0];
-                    option.text = all_data[0];
-                    selectDeleteAnniversary.appendChild(option); 
-                };
-            };
             //document.getElementById('log').value += user_id;
         });
     </script>
