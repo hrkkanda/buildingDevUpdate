@@ -46,6 +46,8 @@
             .then(data => {
             const data_anniversary = data;
             const user_id = document.getElementById('id_').value;
+            document.getElementById('log').value += data_anniversary;
+            document.getElementById('log').value += (typeof data_anniversary);
             const selectDeleteAnniversary = document.getElementById('anniversary');
             for (var i=0; i<data_anniversary.length;i++){
                 let option = document.createElement('option');
@@ -63,12 +65,10 @@
 </head>
   <body> 
     <hidden id="id_"></hidden>
-<!--
     <div> 
       <h3>削除しますか?</h3> 
       <textarea id="log" style="width:96%;height:100px;">
       </textarea> 
--->
     </div> 
     <form class="w-75 mx-auto"><p class="mt-3">登録日</p>
         <select class="form-control w-100 mt-1" name="anniversary" id="anniversary" required>
