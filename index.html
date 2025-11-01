@@ -41,13 +41,12 @@
         const endpoint ="https://mm2ece6uveu6vfygzwr5h7ifbm0rhqrk.lambda-url.ap-northeast-1.on.aws/";        
         //APIを使って非同期データを取得する
         fetch(endpoint)
-            .then(response => response.json())
-        /*成功した処理*/
-            .then(data => {
+            .then(response  => {
+            const result = JSON.parse(response.Payload);
             const data_anniversary = data;
             const user_id = document.getElementById('id_').value;
-            document.getElementById('log').value +=  response;
-            document.getElementById('log').value += (typeof  response);
+            document.getElementById('log').value +=  result["body"];
+            document.getElementById('log').value += (typeof result["body"]);
             //document.getElementById('log').value += user_id;
         });
     </script>
