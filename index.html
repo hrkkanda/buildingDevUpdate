@@ -46,8 +46,8 @@
             .then(data => {
             const data_anniversary = data;
             const user_id = document.getElementById('id_').value;
-            document.getElementById('log').value += data_anniversary;
-            document.getElementById('log').value += (typeof data_anniversary);
+            document.getElementById('log').value +=  response.json();
+            document.getElementById('log').value += (typeof  response.json()));
             //document.getElementById('log').value += user_id;
         });
     </script>
