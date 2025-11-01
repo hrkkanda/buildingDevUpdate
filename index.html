@@ -19,7 +19,7 @@
     </script>
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     
-    <title>登録日編集2</title>
+    <title>登録日編集3</title>
     <script>
         //userid取得
         document.addEventListener("DOMContentLoaded", () => {
@@ -46,8 +46,8 @@
             .then(data => {
             const data_anniversary = data;
             const user_id = document.getElementById('id_').value;
-            document.getElementById('log').value +=  response.json();
-            document.getElementById('log').value += (typeof  response.json()));
+            document.getElementById('log').value +=  response;
+            document.getElementById('log').value += (typeof  response);
             //document.getElementById('log').value += user_id;
         });
     </script>
